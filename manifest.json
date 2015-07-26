@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "ACORNRainbow + Button Export",
+  "description": "Turns your ACORN Timetable from blue to (blue + colours)! and adds an Export as Image button",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://acorn.utoronto.ca/*"], 
+      "css" : ["inject.css"]
+    },
+    {
+        "matches": ["https://acorn.utoronto.ca/sws/timetable/scheduleView.do*"],
+        "js": ["screenshotButton.js", "html2canvas.min.js"],
+        "css": ["screenshotButton.css"]
+    }
+  ]
+}
