@@ -26,6 +26,7 @@ var fixStyles = function() {
         var objects = document.getElementsByClassName(className);
         for (var j = 0; j < objects.length; j++){
             objects[j].style.backgroundColor = colours[className];
+            objects[j].style.fontFamily = "sans-serif";
         }
     }
 }
